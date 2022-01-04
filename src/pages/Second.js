@@ -1,14 +1,17 @@
 import React from "react";
-import { Button, SafeAreaView,Button,Text } from "react-native";
+import { Button, SafeAreaView,Text,StyleSheet } from "react-native";
 
 const Second = (props) => {
     function backToFirst(){
         props.navigation.goBack();
 
     }
+    const respect = props.route.params.salute
     return(
         <SafeAreaView style={styles.container}>
-            <Text style={styles.text}>Hello Second</Text>
+            <Text style={styles.text} >Hello Second</Text>
+            <Text >{respect}</Text>
+
             <Button title="Go Back" onPress={backToFirst}/>
         </SafeAreaView>
     )
